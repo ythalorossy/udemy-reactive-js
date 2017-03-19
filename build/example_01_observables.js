@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // ------------------
 // Part 1
 
-// const simple$ = new RX.Observable(observer => {
+// const simple$ = new Rx.Observable(observer => {
 //     console.log('Generating observable');
 //     setTimeout(() => {
 //         observer.next('An Item!');
@@ -22,7 +22,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //     }, 1000);
 // });
 
-// const error$ = new RX.Observable(observer => {
+// simple$.subscribe(
+//     item => console.log(`one.next ${item}`),
+//     error => console.error(`one.error ${error}`),
+//     () => console.log(`one.complete`));
+
+// const error$ = new Rx.Observable(observer => {
 //     observer.error(new Error('STUFF'));
 // });
 
@@ -46,7 +51,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // ------------------
 // Part 2
 
-
 function createInterval$(time) {
     return new _Rx2.default.Observable(function (observer) {
         var index = 0;
@@ -62,11 +66,12 @@ function createInterval$(time) {
     });
 };
 
-// const y$ = createInterval$(1000).subscribe(createSubscriber('ythalo'));
+// const everySecond$ = createInterval$(1000);
+// const subscription = everySecond$.take(3).subscribe(createSubscriber('one'));
 
 // setTimeout(() => {
-//     y$.unsubscribe();
-// }, 5000)
+//     subscription.unsubscribe();
+// }, 3000)
 
 function take$(sourceObservable$, amount) {
     return new _Rx2.default.Observable(function (observer) {

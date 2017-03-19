@@ -14468,6 +14468,8 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _jquery2.default)('body').text((0, _moment2.default)().format());
+(0, _jquery2.default)('body').text((0, _moment2.default)().format()).css("color", "orange");
+
+console.log("HEY");
 
 },{"jquery":1,"moment":2}]},{},[3]);

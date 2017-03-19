@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 gulp.task('scripts:server', () => {
     return gulp.src('./src-server/**/*.js')
-            .pipe($.cached('server'))
+            .pipe($.cached('server'))   // if didn't change, don't process
             .pipe($.babel())
             .pipe(gulp.dest('./build'));
 });
