@@ -1,9 +1,11 @@
+# Reactive Programming in Udemy Course   
 
-Rodar os scripts client e server 
+## Rodar os scripts client e server 
+
 gulp watch:scripts  
 
-Rodar o script especifico
+## Run specific script
 npm run nodemon build/example_01_observables
 
-Rodar o servidor para o cliente web
+## Run Live server to web client
 live-server
