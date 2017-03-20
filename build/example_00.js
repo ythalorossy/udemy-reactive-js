@@ -8,4 +8,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 console.log((0, _moment2.default)().format());
 
-console.log('HELLO WORLD');
+// console.log('HELLO WORLD');
